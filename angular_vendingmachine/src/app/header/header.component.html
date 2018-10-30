@@ -1,0 +1,23 @@
+<div class="header">
+    <div class="header-logo-text" [routerLink]="['/index']">
+        <div class="header-text">Welcome to Vending Machine Smel for all your beverages</div>
+    </div>
+    <div class="header-wallet-dropdown">
+        <img id="iconWallet" src="../../assets/wallet-solid.svg" [routerLink]="['/wallet']">
+        <div class="header-wallet">
+            <span>€ {{ wallet.getBalance() }}</span>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a routerLink="/index">Home</a>
+                <a routerLink="/wallet">Wallet</a>
+                <!-- <a routerLink="#">Account</a> -->
+                <a routerLink="/admin" (click)="stopMusic()">Admin</a>
+            </div>
+        </div>
+        <!-- <div class="divider"></div> -->
+    </div>
+</div>
+<button class="mutebtn" (click)="muteMusic()"><img class="speakerImage" src="../assets/speaker.png" *ngIf="!muteSound">
+    <img class="speakerImage" src="../assets/speaker_mute.png" *ngIf="muteSound"></button>

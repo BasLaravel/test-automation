@@ -1,0 +1,32 @@
+<div class="admin-page">
+  <button class="btn edit-button" [routerLink]="['/admin/add/new/product']">Add new product</button>
+  <br>
+  <br>
+  <table class="GeneratedTable">
+    <thead>
+      <tr>
+        <th>Product Title</th>
+        <th>Product description</th>
+        <th>Product category</th>
+        <th>Product price</th>
+        <th>Product Stock</th>
+        <th class="edit-options">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let drink of allDrinks">
+        <td>{{ drink.title }}</td>
+        <td>{{ drink.description }}</td>
+        <td>{{ drink.category }}</td>
+        <td>{{ drink.price }}</td>
+        <td>{{ drink.stock }}</td>
+        <td>
+          <div class="btn-group-vertical">
+            <button class=" btn edit-button" [routerLink]="['/admin', drink.ean, drink.table_name]">Edit</button>
+            <button class=" btn remove-button" (click)="apiService.removeOneItem(drink.ean, drink.table_name)">Remove</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

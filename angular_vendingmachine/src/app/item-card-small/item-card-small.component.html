@@ -1,0 +1,11 @@
+<div [ngClass]=" drink.stock > 0 ? 'is-active' : 'out-of-stock'" class="item-card-small" 
+  [routerLink]=" drink.stock > 0 ? ['/index' ,drink.ean, drink.table_name] : ''">
+  <div class="price-title">
+    <div class="title-item-small"> {{drink.title}}</div>
+  </div>
+  <div *ngIf="drink.stock === 0 ">Out of stock</div>
+  <img class="image-item-small" src="{{drink.img_path}}" height=250px>
+  <div class="price-item-small-background">
+    <span class="price-item-small"> {{drink.price}}$ </span>
+  </div>
+</div>

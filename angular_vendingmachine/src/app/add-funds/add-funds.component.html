@@ -1,0 +1,11 @@
+<hr>
+<form #f="ngForm">
+  <input name="inputFunds" [(ngModel)]="funds" required pattern="^\d*\.?\d{1,2}$">
+  <div *ngIf="f.form.controls['inputFunds']?.invalid" class="error">
+    *This field is required and should be a normal amount of money.
+  </div>
+</form>
+
+<button class="moneySubmitButton" [disabled]="f.invalid" (click)="updateWallet(this.funds)">
+  Submit
+</button>

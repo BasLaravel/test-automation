@@ -1,0 +1,13 @@
+button {
+  border-radius: 5px;
+}
+
+.moneySubmitButton {
+  position: relative;
+  bottom: -5px;
+}
+
+.error {
+  color: red;
+  font-size: 10px;
+}

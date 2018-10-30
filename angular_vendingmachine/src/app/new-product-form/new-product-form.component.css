@@ -1,0 +1,35 @@
+.new-product-form {
+    padding: 100px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    font-size: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.warning-text {
+    color: red;
+}
+.admin-form-submit-button {
+    background-color: rgb(228, 192, 190);
+    font-size: 12px;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    line-height: normal;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .admin-form-submit-button :hover {
+    background-color: rgb(247, 199, 196);
+  }
+  

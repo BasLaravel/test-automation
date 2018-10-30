@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="row justify-content-md-center">
+        <button id="drinkButton" class="btn m-2 mt-5" [ngClass]="{'clicked': drinkButton}" (click)="changeDrinkButton()" role="button" [routerLink]="[ '/']">All Drinks</button>
+        <button id="beerButton" class="btn m-2 mt-5" [ngClass]="{'clicked': beerButton}" (click)="changeBeerButton()"  role="button" [routerLink]="[ '/index/beers']">Beers</button>
+        <button id="nonAlcoholicBeerButton" class="btn m-2 mt-5" [ngClass]="{'clicked': nonAlcoholicBeerButton}" (click)="changeNonAlcoholicBeerButton()"  role="button" [routerLink]="[ '/index/non-alcoholic-beers']">Non Alcoholic Beers</button>
+        <button id="wineButton" class="btn m-2 mt-5" [ngClass]="{'clicked': wineButton}"  (click)="changeWineButton()"  role="button" [routerLink]="[ '/index/wines']">Wines</button>
+        <button id="liquorButton" class="btn m-2 mt-5" [ngClass]="{'clicked': liquorButton}"  (click)="changeLiquorButton()"  role="button" [routerLink]="[ '/index/liquor']">Liquor</button>
+    </div>
+</div>

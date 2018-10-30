@@ -1,0 +1,27 @@
+.close-button {
+  height: 15px;
+  margin-right: 8px;
+}
+
+.dropdown-content-btn {
+  display: block;
+  padding: 12px 16px;
+}
+
+.dropdown-content-btn a {
+  color: black;
+  padding: 4px 0px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.hovered {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.hoveredButton {
+  background-color: rgba(255, 0, 0, 0.308);
+  border-radius: 5px;
+}

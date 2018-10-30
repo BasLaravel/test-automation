@@ -1,0 +1,14 @@
+button {
+    background-color: rgb(228, 192, 190); 
+  }
+
+  .clicked {
+    background-color: rgb(247, 199, 196);
+    border-color: white;
+    box-shadow:none;
+  }
+
+  .btn:hover{
+    background-color: rgb(247, 199, 196);
+  }
+

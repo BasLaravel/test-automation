@@ -1,0 +1,26 @@
+<div class="item-card-small">
+  <img id="close-button" src="../../assets/window-close.svg" [routerLink]="['/index']" />
+  <div class="title-item-small">{{drink.title}}</div>
+  <form class="pic-price-info">
+    <div class="title-image">
+      <img class="image-item-small" src="{{drink.img_path}}">
+    </div>
+    <div class="price-and-info">
+      <p class="price-item-small"> €{{drink.price}} </p>
+      <p>{{stockLevel}}</p>
+      <p class="info-item-small">
+        {{drink.description}}
+      </p>
+      <div class="input-amount-item">
+        <input [(ngModel)]="amountItems" type="number" name="amountItemsToAdd" min="1" max="10">
+      </div>
+      <button class="add-button-item" (click)="checkAmountItemsToBeAdded(drink)"
+        [disabled]="!inputAmountIsFilledIn"> Add
+      </button>
+      <p *ngIf="notEnoughCredits() || cannotBuy " class="warning-text">You don't have enough credits to add the next item to the cart.
+        Consider adding money to wallet.</p>
+      <!-- <p *ngIf="checkAmountItemsToBeAdded()" class="warning-text">You have to select a amount. You can only buy between
+        1 and 10 items</p> -->
+    </div>
+  </form>
+</div>

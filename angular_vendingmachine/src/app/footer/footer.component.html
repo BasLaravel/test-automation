@@ -1,0 +1,16 @@
+<div class="footer">
+  <div class="header-logo-text">
+    <div class="header-text">info@smel.com | +31 611 2233 44</div>
+  </div>
+  <div class="footer-wallet-dropdown">
+    <div class="dropdown">
+      <img id="iconWallet" src="../../assets/cart-plus-solid.svg">
+      <app-cart-item-count></app-cart-item-count>
+      <app-footer-popup class="dropdown-content"></app-footer-popup>
+    </div>
+    <div class="dropdown">
+      <span class="dropbtn">&nbsp;€{{cart.totalPrice.toFixed(2)}}</span>
+    </div>
+    <button class="buy-button" (click)="buyAction()">BUY</button>
+  </div>
+</div>

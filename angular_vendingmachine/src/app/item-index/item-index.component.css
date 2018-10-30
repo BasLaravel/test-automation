@@ -1,0 +1,30 @@
+* {
+  display: flex;
+  justify-content: center;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.item-index-wrapper{
+  display: flex;
+  flex-direction: column;
+  padding-top: 75px;
+}
+
+.item-index-all {
+  flex-wrap: wrap;
+  margin-bottom: 75px;
+}
+
+button {
+  background-color: rgb(228, 192, 190);
+  border-radius: 5px;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.button-active {
+  background-color: rgb(247, 199, 196);
+}

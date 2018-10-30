@@ -1,0 +1,20 @@
+<div class='container'>
+  <h1>Wallet</h1>
+
+  <p>
+    Your current wallet balance: €{{ wallet.getBalance() }}
+  </p>
+  <div class="limitError" *ngIf="showLimitError">
+    <h6>Current currency limit reached</h6>
+  </div>
+
+  <div class="AddFundsContainer">
+    <div *ngIf="show">
+      <button class="addbutton" [disabled]='showMenu' (click)="showAddMoneyMenu()">Add funds</button>
+    </div>
+
+    <div *ngIf="!show">
+      <app-add-funds (uploaded)="showAddMoneyMenu($event)"></app-add-funds>
+    </div>
+  </div>
+</div>

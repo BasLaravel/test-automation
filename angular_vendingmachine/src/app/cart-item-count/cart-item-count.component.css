@@ -1,0 +1,16 @@
+.cart-item-count {
+  position: fixed;
+  bottom: 44px;
+  margin-left: 28px;
+  font-size: 12px;
+  background: rgb(243, 243, 243);
+  border-radius: 5px;
+  min-width: 18px;
+  height: 13px;
+}
+
+.cart-item-count div {
+  position: relative;
+  left: 3px;
+  bottom: 2px;
+}

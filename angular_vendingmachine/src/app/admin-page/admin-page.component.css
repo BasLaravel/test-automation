@@ -1,0 +1,70 @@
+.admin-page {
+  padding: 100px;
+}
+
+p {
+  padding: 100px;
+}
+
+table.GeneratedTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-style: hidden;
+  /* border-top-style: solid; */
+  color: #000000;
+}
+
+table.GeneratedTable td,
+table.GeneratedTable th {
+  border-width: 1px;
+  border-top: #e4e4e4;
+  border-left: transparent;
+  border-right: transparent;
+  border-style: solid;
+  padding: 3px;
+  font-size: 10px;
+}
+
+tbody :first-child td {
+  border-top-style: none;
+}
+
+table.GeneratedTable thead {
+  background-color: rgb(229, 212, 243);
+  border-bottom: hidden;
+  color: white;
+}
+
+.edit-options {
+  /* color: blue; */
+}
+
+.edit-button {
+  background-color: rgb(228, 192, 190);
+  font-size: 12px;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  line-height: normal;
+  cursor: pointer;
+  border-bottom: solid #e4e4e4 1px;
+}
+
+.edit-button:hover {
+  background-color: rgb(247, 199, 196);
+}
+
+.remove-button {
+  border-top: solid #e4e4e4 1px;
+  background-color: rgb(228, 192, 190);
+  font-size: 12px;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: rgb(247, 199, 196);
+}

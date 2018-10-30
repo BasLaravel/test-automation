@@ -1,0 +1,5 @@
+<div *ngFor="let item of cart.cartItems" class="dropdown-content-btn">
+  <button class="btn btn-light btn-sm" (click)=cart.remove(item) style="color:red;">X</button>
+  {{ item.title }}
+  Qty: {{item.counter}}
+</div>

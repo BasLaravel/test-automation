@@ -1,0 +1,65 @@
+<div class="new-product-form">
+    <form #f="ngForm">
+      <label>Product EAN</label> <br>
+      <div *ngIf="placeholder"><input type="number" class="product-ean" name="productEAN" value=""></div>
+      <div *ngIf="!placeholder"><input type="number" class="product-ean" name="productEAN" [(ngModel)]="form_ean"></div>
+      <p>This field should be an unique number with 13 digits.<br>
+         Leave this field empty to have the program generate a random EAN number.
+      </p>
+
+      <hr>
+
+      <label>Product title</label> <br>
+      <div *ngIf="placeholder"><input type="text" class="product-title" name="productTitle" value="" required></div>
+      <div *ngIf="!placeholder"><input type="text" class="product-title" name="productTitle" [(ngModel)]="form_title" required></div>
+      <div *ngIf="f.form.controls['productTitle']?.invalid">This field is required and should be a valid product title</div> <br>
+
+      <hr>
+  
+      <label>Product description</label> <br>
+      <div *ngIf="placeholder"><input type="text" class="product-description" name="productDescription" value="" required></div>
+      <div *ngIf="!placeholder"><input type="text" class="product-description" name="productDescription" [(ngModel)]="form_desc" required></div>
+      <div *ngIf="f.form.controls['productDescription']?.invalid">This field is required and should be a valid item description</div> <br>
+
+      <hr>
+
+      <label>Product category</label> <br>
+      <select name="productCategory" [(ngModel)]="form_cat">
+        <option value="beer" selected>Beer</option>
+        <option value="non alcoholic beer">Non-alcoholic beer</option>
+        <option value="red wine">Red wine</option>
+        <option value="liquor">Liquor</option>
+      </select> <br> <br>
+
+      <hr>
+
+      <label>Product price</label> <br>
+      <div *ngIf="placeholder"><input type="text" class="product-price" name="productPrice" value="" required></div>
+      <div *ngIf="!placeholder"><input type="number" class="product-price" name="productPrice" [(ngModel)]="form_price" required></div>
+      <div *ngIf="f.form.controls['productPrice']?.invalid">This field is required and should be a logical price</div> <br>
+
+      <hr>
+  
+      <label>Product stock</label> <br>
+      <div *ngIf="placeholder"><input type="text" class="product-stock" name="productStock" value="" required></div>
+      <div *ngIf="!placeholder"><input type="number" class="product-stock" name="productStock" [(ngModel)]="form_stock" required pattern="^[0-9]+$"></div>
+      <div *ngIf="f.form.controls['productStock']?.invalid">This field is required and should be a whole number</div> <br>
+
+      <hr>
+
+      <label>Product image</label> <br>
+      <div *ngIf="placeholder"><input type="text" class="product-image" name="productImage" value="" required></div>
+      <div *ngIf="!placeholder"><input type="text" class="product-image" name="productImage" [(ngModel)]="form_image" required></div>
+      <div *ngIf="f.form.controls['productImage']?.invalid">This field is required and should be an image link</div> <br>
+    </form>
+
+    <div *ngIf="notUnique">
+      <h4 class="warning-text">EAN code is NOT unique. Fix that.</h4> <br>
+    </div>
+
+    <div *ngIf="wrongEAN">
+        <h4 class="warning-text">EAN code is incorrect. Fix that.</h4> <br>
+    </div>
+  
+    <button class="admin-form-submit-button" [disabled]="f.invalid" (click)="validateForm()">Submit</button>
+  </div>

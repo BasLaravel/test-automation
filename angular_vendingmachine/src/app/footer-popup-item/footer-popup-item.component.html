@@ -1,0 +1,6 @@
+<div class="dropdown-content-btn" [ngClass]="classObject" (mouseover)="darken()" (mouseout)="darken()">
+  <a>
+    <img class="close-button" src="../../assets/window-close.svg" (click)=remove(item) (mouseover)="red()" (mouseout)="red()" />
+    <span [routerLink]="['/index/item']">{{item.title}}: {{item.counter}}</span>
+  </a>
+</div>
