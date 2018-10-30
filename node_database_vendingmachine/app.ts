@@ -6,7 +6,7 @@ import fs from 'fs'
 import { RootObject, ProductsItem } from './interfaces';
 import * as bodyParser from "body-parser";
 // @ts-ignore
-import { passwordForDatabase, passwordForGMail } from './passwords';
+//import { passwordForDatabase, passwordForGMail } from './passwords';
 import * as nodemailer from "nodemailer";
 
 const app = express();
@@ -15,7 +15,7 @@ const app = express();
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: passwordForDatabase,
+    password:'',
     database: 'vending_machine_4'
 });
 
@@ -247,6 +247,11 @@ app.get('/seed/beers', (req, res) => {
             if (err) throw err;
             // console.log(results);
             res.send(results);
+        })
+    })
+
+    app.get('/', (req, res) => {
+            res.send('node-express-server is running');
         })
     })
 

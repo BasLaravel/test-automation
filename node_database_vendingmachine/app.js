@@ -17,14 +17,14 @@ const mysql_1 = __importDefault(require("mysql"));
 const fs_1 = __importDefault(require("fs"));
 const bodyParser = __importStar(require("body-parser"));
 // @ts-ignore
-const passwords_1 = require("./passwords");
+//import { passwordForDatabase, passwordForGMail } from './passwords';
 const nodemailer = __importStar(require("nodemailer"));
 const app = express_1.default();
 //create connection 
 const db = mysql_1.default.createConnection({
     host: 'localhost',
     user: 'root',
-    password: passwords_1.passwordForDatabase,
+    password: '',
     database: 'vending_machine_4'
 });
 //make connection
@@ -246,6 +246,9 @@ app.get('/api/get-all-liquor', (req, res) => {
         res.send(results);
     });
 });
+app.get('/', (req, res) => {
+    res.send('node-express-server is running');
+});
 //------------------ADMIN TABLE UPDATE-----------------\\
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -318,7 +321,7 @@ app.post('/api/send-products', function (req, res) {
         service: 'gmail',
         auth: {
             user: 'peperone60@gmail.com',
-            pass: passwords_1.passwordForGMail
+            pass: passwordForGMail
         }
     });
     console.log("Command to send ordered products received");
